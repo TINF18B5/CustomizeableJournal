@@ -1,4 +1,6 @@
 package com.scherer.customizablejournal.model.customelements;
 
-public interface CustomElement {
+import android.os.Parcelable;
+
+public interface CustomElement extends Parcelable {
 }

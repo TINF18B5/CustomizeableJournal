@@ -1,4 +1,4 @@
-package com.scherer.customizablejournal.ui;
+package com.scherer.customizablejournal.view;
 
 import android.os.Bundle;
 
