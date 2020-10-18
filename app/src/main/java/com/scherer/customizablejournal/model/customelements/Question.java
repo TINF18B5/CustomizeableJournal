@@ -3,6 +3,8 @@ package com.scherer.customizablejournal.model.customelements;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Arrays;
+
 public class Question implements CustomElement, Parcelable {
 
     private String question;
@@ -44,7 +46,7 @@ public class Question implements CustomElement, Parcelable {
 
     @Override
     public CustomElement copy() {
-        return new Question(question, answers);
+        return new Question(question, Arrays.copyOf(answers, answers.length));
     }
 
     public String getQuestion() {

@@ -45,4 +45,12 @@ public class JournalPage implements Parcelable {
             return new JournalPage[size];
         }
     };
+
+    public List<CustomElement> getElements() {
+        return elements;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
 }
