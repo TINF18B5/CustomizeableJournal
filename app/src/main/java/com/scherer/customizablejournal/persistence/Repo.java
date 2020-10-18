@@ -1,6 +1,6 @@
 package com.scherer.customizablejournal.persistence;
 
-import com.scherer.customizablejournal.model.customelements.JournalPage;
+import com.scherer.customizablejournal.model.JournalPage;
 
 import java.util.List;
 

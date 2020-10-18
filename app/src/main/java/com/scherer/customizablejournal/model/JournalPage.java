@@ -1,14 +1,14 @@
-package com.scherer.customizablejournal.model.customelements;
+package com.scherer.customizablejournal.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.scherer.customizablejournal.model.customelements.CustomElement;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class JournalPage implements Parcelable {
+public class JournalPage implements Parcelable, Comparable<JournalPage> {
 
     final List<CustomElement> elements;
     final LocalDate date;
@@ -57,5 +57,10 @@ public class JournalPage implements Parcelable {
 
     public LocalDate getDate() {
         return date;
+    }
+
+    @Override
+    public int compareTo(JournalPage o) {
+        return this.date.compareTo(o.date);
     }
 }
