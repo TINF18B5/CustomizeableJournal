@@ -18,6 +18,11 @@ public class JournalPage implements Parcelable {
         date = LocalDate.now();
     }
 
+    public JournalPage(List<CustomElement> elements, LocalDate date){
+        this.elements = elements;
+        this.date = date;
+    }
+
     protected JournalPage(Parcel in) {
         elements = in.readArrayList(JournalPage.class.getClassLoader());
         date = LocalDate.ofEpochDay(in.readLong());

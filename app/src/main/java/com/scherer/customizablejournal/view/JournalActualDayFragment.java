@@ -28,8 +28,8 @@ public class JournalActualDayFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-        if(savedInstanceState != null){
-        page = savedInstanceState.getParcelable(JournalActualDayFragment.PARCEABLEPARAM);
+        if(getArguments() != null){
+        page = getArguments().getParcelable(JournalActualDayFragment.PARCEABLEPARAM);
         }
 
         // Inflate the layout for this fragment
