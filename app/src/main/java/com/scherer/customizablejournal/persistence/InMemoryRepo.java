@@ -2,6 +2,7 @@ package com.scherer.customizablejournal.persistence;
 
 import com.scherer.customizablejournal.model.customelements.CustomElement;
 import com.scherer.customizablejournal.model.customelements.JournalPage;
+import com.scherer.customizablejournal.model.customelements.Question;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -14,7 +15,10 @@ public class InMemoryRepo implements Repo{
 
     public InMemoryRepo() {
         JournalPage page = new JournalPage(new ArrayList<>());
-        JournalPage page2 = new JournalPage(new ArrayList<>(), LocalDate.now().minusDays(2));
+        List<CustomElement> myPage = new ArrayList<>();
+        myPage.add(new Question("Was ist der Sinn des Lebens?", new String[]{"Zweiundpfürzig", "42"}));
+        myPage.add(new Question("Warum?", new String[]{"Weil halt..."}));
+        JournalPage page2 = new JournalPage(myPage, LocalDate.now().minusDays(2));
         pages.add(page);
         pages.add(page2);
     }
