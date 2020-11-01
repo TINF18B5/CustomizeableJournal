@@ -36,8 +36,8 @@ public class ViewHolderAdapter extends RecyclerView.Adapter<CustomElementsViewHo
     @Override
     public CustomElementsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(viewType, parent, false);
-
-        return new CustomElementsViewHolder(view);
+        final ViewType viewTypeByRes = ViewType.getViewTypeByRes(viewType);
+        return viewTypeByRes.createNewViewHolder(view);
     }
 
     @Override
