@@ -1,4 +1,4 @@
-package com.scherer.customizablejournal.view.customselements;
+package com.scherer.customizablejournal.view.customelements;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.scherer.customizablejournal.model.customelements.CustomElement;
 import com.scherer.customizablejournal.model.customelements.JournalPage;
-import com.scherer.customizablejournal.view.customselements.viewholders.CustomElementsViewHolder;
+import com.scherer.customizablejournal.view.customelements.viewholders.CustomElementsViewHolder;
 
+/**
+ * Adapter to show the {@link CustomElement} objects on a given {@link JournalPage} on the {@link com.scherer.customizablejournal.view.MainJournalActivity}.
+ *
+ * Uses {@link CustomElementsViewHolder} and its subclasses to hold and update the views.
+ */
 public class ViewHolderAdapter extends RecyclerView.Adapter<CustomElementsViewHolder> {
-
-    ViewTypGetter getter = new ViewTypGetter();
 
     private final JournalPage page;
 
@@ -29,7 +32,7 @@ public class ViewHolderAdapter extends RecyclerView.Adapter<CustomElementsViewHo
     @Override
     public int getItemViewType(int position) {
         CustomElement customElement = page.getElements().get(position);
-         return getter.getViewType(customElement);
+        return ViewType.getViewType(customElement).getLayoutRes();
     }
 
     @NonNull

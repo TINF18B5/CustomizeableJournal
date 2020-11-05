@@ -14,6 +14,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+/**
+ * Entry point of the application.
+ * Shows a side-scrollable list of journal pages.
+ *
+ * Shows a "+" Button to create a new Journal Page based on Previously created Templates.
+ * Uses the {@link JournalScrollFragment} to display the Journal Pages.
+ */
 public class MainJournalActivity extends AppCompatActivity {
 
     @Override

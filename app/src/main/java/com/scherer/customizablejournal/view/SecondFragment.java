@@ -11,6 +11,10 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.scherer.customizablejournal.R;
 
+/**
+ * Was created by Android Studio, can be removed at latter time
+ */
+@Deprecated
 public class SecondFragment extends Fragment {
 
     @Override
