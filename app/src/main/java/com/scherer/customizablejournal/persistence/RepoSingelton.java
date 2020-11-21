@@ -1,10 +1,13 @@
 package com.scherer.customizablejournal.persistence;
 
+import androidx.annotation.VisibleForTesting;
+
 /**
  * Singleton instance to hold a repository.
  * Only to be used by {@link Repo#getInstance()}!
  */
-class RepoSingelton {
+@VisibleForTesting(otherwise = VisibleForTesting.PACKAGE_PRIVATE)
+public class RepoSingelton {
 
     private static Repo repo;
 
@@ -13,5 +16,10 @@ class RepoSingelton {
             repo = new InMemoryRepo();
         }
         return repo;
+    }
+
+    @VisibleForTesting()
+    public static void supersedeSingleton(Repo repo) {
+        RepoSingelton.repo = repo;
     }
 }

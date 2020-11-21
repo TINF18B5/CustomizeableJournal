@@ -20,7 +20,7 @@ public class CustomElementsViewHolderQuestion extends CustomElementsViewHolder {
     public CustomElementsViewHolderQuestion(@NonNull View itemView) {
         super(itemView);
        questionView = itemView.findViewById(R.id.questionText);
-       answerView = itemView.findViewById(R.id.answerTest);
+       answerView = itemView.findViewById(R.id.answerText);
     }
 
     @Override

@@ -64,7 +64,7 @@ public enum ViewType {
                 return value;
             }
         }
-        throw new IllegalArgumentException("Could't find ViewType of Element!");
+        throw new IllegalArgumentException("Couldn't find ViewType of Element!");
     }
 
     /**
