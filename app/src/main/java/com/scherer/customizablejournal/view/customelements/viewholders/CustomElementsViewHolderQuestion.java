@@ -1,4 +1,4 @@
-package com.scherer.customizablejournal.view.customselements.viewholders;
+package com.scherer.customizablejournal.view.customelements.viewholders;
 
 import android.view.View;
 import android.widget.TextView;
@@ -9,6 +9,9 @@ import com.scherer.customizablejournal.R;
 import com.scherer.customizablejournal.model.customelements.CustomElement;
 import com.scherer.customizablejournal.model.customelements.Question;
 
+/**
+ * Holds the given answers for a {@link Question} element
+ */
 public class CustomElementsViewHolderQuestion extends CustomElementsViewHolder {
 
     private final TextView questionView;
@@ -17,7 +20,7 @@ public class CustomElementsViewHolderQuestion extends CustomElementsViewHolder {
     public CustomElementsViewHolderQuestion(@NonNull View itemView) {
         super(itemView);
        questionView = itemView.findViewById(R.id.questionText);
-       answerView = itemView.findViewById(R.id.answerTest);
+       answerView = itemView.findViewById(R.id.answerText);
     }
 
     @Override

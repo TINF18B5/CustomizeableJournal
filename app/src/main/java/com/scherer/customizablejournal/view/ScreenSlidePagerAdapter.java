@@ -1,7 +1,6 @@
 package com.scherer.customizablejournal.view;
 
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -10,15 +9,17 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.scherer.customizablejournal.model.customelements.JournalPage;
 import com.scherer.customizablejournal.persistence.Repo;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * Used to hold the different Journal Pages when sidescrolling in {@link MainJournalActivity}.
+ * <p>
+ * Uses the {@link JournalActualDayFragment} to display a given JournalPage
+ */
 public class ScreenSlidePagerAdapter extends FragmentStateAdapter {
     private final Repo repo;
 
     public ScreenSlidePagerAdapter(Fragment fragment) {
         super(fragment);
-        repo= Repo.getInstance();
+        repo = Repo.getInstance();
     }
 
     @NonNull
